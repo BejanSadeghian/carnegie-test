@@ -28,3 +28,7 @@ python main.py <source> <target> <async> <chunks> <chunksize>
 2. The only required argument is "source"
 3. When passing in arguments, do not provide quotation marks for things you expect to be a string (the code will explicitly handle this)
 4. All testing was performed on a Windows machine (7 & 10) with Python 3.6.4
+
+**Assumptions**
+
+1. Ive made the assumption that during the process of downloading data chunks from the server, it is okay to store the compiled data in memory before writing to disk.
