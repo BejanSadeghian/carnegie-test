@@ -39,6 +39,12 @@ ___
 
 The code in test-request.py takes in one argument (source) and runs through a few scenarios listed below and outputs the results to the "testResults.xlsx" file.
 
+```python
+# Test Parameters 
+chunk = [1,4,40]
+chunksize = [2**2,2**20,(2**24)] # 4Bytes, 1MiB, 16MiB
+async = ['False','True']
+```
 
 How to Run test-request.py
 ```
