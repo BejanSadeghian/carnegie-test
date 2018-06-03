@@ -1,4 +1,6 @@
-**main.py**
+## **GET Request in Chunks**
+
+**Python 3.x Required**
 
 This code performs a GET request in chunks and save the results to a file. The number of chunks, size of the chunks, and how to download are modulated with arguments.
 
@@ -10,14 +12,12 @@ This code performs a GET request in chunks and save the results to a file. The n
   - **chunks** {type: int} Number of chunks to download (default is 4)
   - **chunksize** {type: int} Size of each chunk to download (default is 1 MiB)
 
-**Python 3.x Required**
-
 How to Install Dependencies
 ```
 pip install -r requirements.txt
 ```
 
-How to Run
+How to Run main.py
 ```
 python main.py <source> <target> <async> <chunks> <chunksize>
 ```
@@ -32,3 +32,15 @@ python main.py <source> <target> <async> <chunks> <chunksize>
 **Assumptions**
 
 1. Ive made the assumption that during the process of downloading data chunks from the server, it is okay to store the compiled data in memory before writing to disk.
+
+___
+
+**Test Code**
+
+The code in test-request.py takes in one argument (source) and runs through a few scenarios listed below and outputs the results to the "testResults.xlsx" file.
+
+
+How to Run test-request.py
+```
+python test-request.py <source>
+```
