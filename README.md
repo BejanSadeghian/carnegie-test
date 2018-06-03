@@ -10,6 +10,8 @@ This code performs a GET request in chunks and save the results to a file. The n
   - **chunks** {type: int} Number of chunks to download (default is 4)
   - **chunksize** {type: int} Size of each chunk to download (default is 1 MiB)
 
+**Python 3.x Required**
+
 How to Install Dependencies
 ```
 pip install -r requirements.txt
@@ -22,5 +24,7 @@ python main.py <source> <target> <async> <chunks> <chunksize>
 
 **Notes**
 
-1. The arguments must be passed to main.py in the order listed above
+1. The arguments must be passed to main.py in the order listed above (and no not skip one)
 2. The only required argument is "source"
+3. When passing in arguments, do not provide quotation marks for things you expect to be a string (the code will explicitly handle this)
+4. All testing was performed on a Windows 7 and 10 machine
