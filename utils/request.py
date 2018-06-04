@@ -49,7 +49,7 @@ def requestURL(source, target=r'.\data\default.jar', async='False', chunks=4, ch
 		chunks = int(chunks) #Implicit Round Down
 		chunksize = int(chunksize) #Implicit Round Down
 		if chunks <=0 or chunksize <= 0:
-			raise TypeError('The number of chunks and chunk sizes cannot be negative')
+			raise ValueError('The number of chunks and chunk sizes cannot be negative')
 
 		if async.lower() == 'true':
 			async = True
