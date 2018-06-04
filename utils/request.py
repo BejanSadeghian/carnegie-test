@@ -39,7 +39,7 @@ def requestURL(source, target=r'.\data\default.jar', async='False', chunks=4, ch
 			r.close()
 		return (output, byteRng)
 
-	# Validate input types first, if there is an issue then cancel the operation
+	# Validate inputs first, if there is an issue then cancel the operation
 	continueBool = True
 	monkey.patch_socket() # Monkey patches the socket module to avoid serialization
 
@@ -48,6 +48,8 @@ def requestURL(source, target=r'.\data\default.jar', async='False', chunks=4, ch
 		target = str(target)
 		chunks = int(chunks) #Implicit Round Down
 		chunksize = int(chunksize) #Implicit Round Down
+		if chunks <=0 or chunksize <= 0:
+			raise TypeError('The number of chunks and chunk sizes cannot be negative')
 
 		if async.lower() == 'true':
 			async = True
